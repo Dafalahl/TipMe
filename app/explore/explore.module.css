@@ -1,0 +1,96 @@
+/* Container Utama */
+.exploreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f0f2f5; 
+}
+
+/* Tata Letak Kartu */
+.cardList {
+  display: grid;
+  /* Memaksa grid untuk selalu menampilkan 3 kolom dengan lebar yang sama */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1000px; /* Batasi lebar total container agar 3 kartu terlihat pas */
+}
+
+/* Kartu */
+.card {
+  position: relative; 
+  height: 320px; 
+  background-color: #ffffff;
+  border-radius: 16px; 
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+a.noUnderline {
+  text-decoration: none;
+  color: inherit; 
+}
+
+/* Latar Belakang Kartu */
+.backgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; 
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px 16px 0 0; 
+}
+
+/* Foto Profil */
+.profilePicWrapper {
+  position: absolute;
+  top: 35%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 10;
+}
+
+.profilePic {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 6px solid #fff; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Konten Kartu */
+.cardContent {
+  position: absolute;
+  top: 55%; 
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.username {
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color: #2c3e50; 
+  margin-bottom: 0.25rem;
+  
+}
+
+.bio {
+  font-size: 1rem; 
+  color: #7f8c8d; 
+  margin-top: 0.5rem;
+  padding: 0 1rem;
+  line-height: 1.4;
+}
+

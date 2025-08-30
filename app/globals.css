@@ -1,0 +1,84 @@
+
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f9fa; /* Latar belakang yang lembut */
+  color: #343a40; /* Warna teks utama */
+}
+
+/* Header dan Navbar */
+.header {
+  width: 100%;
+  padding: 1rem 1.5rem; /* Padding yang lebih baik */
+  border-bottom: 1px solid #dee2e6; /* Border yang lebih halus */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+  background-color: #ffffff; /* Latar belakang putih */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px; /* Tinggi navbar yang lebih standar */
+}
+
+.navbar .router {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar .router a {
+  text-decoration: none;
+  color: #6c757d; /* Warna yang lebih modern */
+  font-weight: 500;
+  font-size: 1.1rem; /* Ukuran font yang sedikit lebih besar */
+  transition: color 0.3s ease;
+}
+
+.navbar .router a:hover {
+  color: #000000;
+}
+
+/* Halaman Utama */
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4rem 1.5rem; /* Padding yang lebih banyak untuk visual yang lebih baik */
+  min-height: calc(100vh - 60px); /* Sesuaikan dengan tinggi navbar baru */
+}
+
+.start h1 {
+  font-size: 3rem; /* Ukuran font yang lebih besar untuk judul */
+  font-weight: 700; /* Tebal */
+  color: #212529;
+  text-align: center;
+}
+
+.connectButtonPlaceholder {
+  width: 150px; 
+  height: 40px; 
+  background-color: #e9ecef; /* Warna latar belakang yang lebih halus */
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.custom-gradient-text {
+  background: linear-gradient(90deg, #7c3aed, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

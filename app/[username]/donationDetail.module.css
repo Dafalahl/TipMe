@@ -1,0 +1,177 @@
+.container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.twoColumnLayout {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap; 
+  width: 100%;
+}
+
+.leftColumn {
+  flex: 1; 
+  min-width: 250px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Styling baru */
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.profpic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 4px solid #fff;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.rightColumn {
+  flex: 4; 
+  min-width: 300px;
+  /* Styling baru */
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Gaya untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+  .twoColumnLayout {
+    flex-direction: column;
+  }
+}
+
+/* Sisa kode CSS lainnya */
+.donationImage {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.donationTitle {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.donationDescription {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+.totalDonate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Modifikasi pada tombol donate */
+.donateButton {
+  display: inline-block;
+
+  padding: 0.5rem 1.5rem; /* Kurangi padding untuk membuatnya lebih kecil */
+  font-size: 0.9rem; /* Kurangi ukuran font */
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.donateButton:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.popupOverlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Progress Bar Styles */
+.progressContainer {
+  width: 100%;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.progressLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.progressBar {
+  width: 100%;
+  height: 12px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.progressValue {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
